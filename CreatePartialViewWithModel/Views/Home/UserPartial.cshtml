@@ -1,0 +1,22 @@
+﻿@model IEnumerable<CreatePartialViewWithModel.Models.User>
+
+<div class="row pb-5 mb-4">
+    @foreach (User user in Model)
+    {
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <!-- Card-->
+            <div class="card shadow-sm border-0 rounded">
+                <div class="card-body p-0">
+                    <img src="@Html.DisplayFor(modelItem => user.imageLink)" alt="" class="w-100 card-img-top">
+                    <div class="p-4">
+                        <h5 class="mb-0">@Html.DisplayFor(modelItem => user.name)</h5>
+                        <p class="small text-muted">@Html.DisplayFor(modelItem => user.profession)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+

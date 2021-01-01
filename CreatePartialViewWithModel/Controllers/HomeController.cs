@@ -22,10 +22,16 @@ namespace CreatePartialViewWithModel.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        public IActionResult Users()
         {
-            return View();
+            var users = new List<User>()
+            {
+                new User(){name="Mark Rockwell",profession="CEO - Consultant",imageLink="https://res.cloudinary.com/mhmd/image/upload/v1570799922/profile-1_dewapk.jpg"},
+                new User(){name="Walter White",profession="Web Development",imageLink="https://res.cloudinary.com/mhmd/image/upload/v1570799922/profile-2_ujssbj.jpg"},
+                new User(){name="Sarah Jhinson",profession="Marketing",imageLink="https://res.cloudinary.com/mhmd/image/upload/v1570799922/profile-3_ybnq8v.jpg"},
+                new User(){name="William Anderson",profession="Content",imageLink="https://res.cloudinary.com/mhmd/image/upload/v1570799924/profile-4_s3fort.jpg"},
+            };
+            return View(users);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
